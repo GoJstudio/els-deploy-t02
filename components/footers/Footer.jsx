@@ -39,11 +39,11 @@ const Footer = ({ menuList }) => {
 
           <div className={styles.rightContents}>
             {menuList.map((menu) => (
-              <div className={styles.menuWrapper}>
-                <h6 className={styles.menu}>{menu[0]}</h6>
+              <div key={menu[0]} className={styles.menuWrapper}>
+                <h6 key={menu[0]} className={styles.menu}>{menu[0]}</h6>
                 <ul key={menu[0]} className={styles.list}>
                   {menu[1].map((item) => (
-                    <li className={styles.item}>
+                    <li key={item} className={styles.item}>
                       <Link key={item} href={`/${menu[0].replace(/\s+/g, '-').toLowerCase()}/${item.replace(/\s+/g, '-').toLowerCase()}`}>
                         {item}
                       </Link>

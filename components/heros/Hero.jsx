@@ -15,7 +15,7 @@ const Hero = () => {
             your uninterrupted business
           </h1>
           <p className={styles.desc}>
-          Protect your business from power outages: With our power systems like UPS, your business can continue operating even during power outages. This means your employees can keep working, your customers can still make purchases, and your operations won't be disrupted.
+          Protect your business from power outages: With our power systems like UPS, your business can continue operating even during power outages. This means your employees can keep working, your customers can still make purchases, and your operations wont be disrupted.
           </p>
         </div>
         {/* textContent */}

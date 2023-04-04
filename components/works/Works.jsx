@@ -16,8 +16,9 @@ const Works = ({ works }) => {
         {/* headline */}
 
         <div className={styles.cardContents}>
-          {works.map((work) => (
+          {works.map((work, idx) => (
             <WorkCard
+              key={idx}
               date={work.date}
               title={work.title}
             >
