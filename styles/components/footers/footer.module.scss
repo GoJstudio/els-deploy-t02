@@ -1,0 +1,504 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.footer {
+  background-color: $black90;
+  color: $gray20;
+  padding: 48px 0 24px;
+
+  .container {
+    @include container-flex(2.4rem);
+    flex-direction: column;
+
+    .mainContents {
+      @include container-flex;
+      width: 70%;
+
+      .leftContents{
+        @include flex-col-center(2.4rem);
+        justify-content: space-between;
+        // background-color: #eee;
+  
+        .logo {
+          @include flex-col-center(4px);
+          color: $white2;
+          transition: 0.4s;        
+    
+          .name {
+            @include disp4;
+            letter-spacing: 0.2rem;
+          }
+  
+          .slogan {
+            font-weight: 400;
+            letter-spacing: 0.15rem;
+          }
+          
+          .initial {
+            display: flex;
+            line-height: 100%;
+            letter-spacing: 0.05rem;
+            
+            p {
+              font-size: var(--para-sm);
+              margin-right: 8px;
+              
+              strong {
+                font-weight: 700;
+              }
+            }
+          }
+    
+          &:hover {
+            color: $secondary-LTL1;
+          }
+        }
+        // logo
+  
+        .snsContainer {
+          display: flex;
+          gap: 20px;
+  
+          .sns {
+            .icon {
+              font-size: 3.2rem;
+              transition: 0.4s;
+  
+              &:hover {
+                color: $secondary-LTL1;
+              }
+            }
+          }
+        }
+        // snsContainer
+      }
+      // leftContents
+  
+      .rightContents {
+        @include container-grid(4, 1fr, 0);
+        width: 70%;
+        justify-items: flex-end;
+        margin: 0;
+        
+        .menuWrapper {
+          @include flex-col-center(16px);
+          align-items: flex-start;
+
+
+          &:last-child {
+            display: none;
+          }
+
+          .menu {
+            font-weight: 500;
+          }
+
+          .list {
+            @include flex-col-center(8px);
+            align-items: flex-start;
+            // background-color: #eee;
+
+            .item {
+              transition: 0.4s;
+
+              a {
+                font-size: var(--para-sm);
+              }
+
+              &:hover {
+                color: $primary-LTL1;
+              }
+            }
+          }
+          // list
+        }
+        // menuWrapper
+      }
+      // rightContents
+    }
+    // mainContents
+
+    p {
+      font-size: var(--para-sm);
+      margin: 0 auto;
+    }
+  }
+  // container
+}
+// footer
+
+
+// @media screen and (max-width: 1800px) ..........................
+@include xxl {
+  .footer {  
+    .container {  
+      .mainContents {
+        width: 80%;
+        .leftContents{
+    
+          .logo {      
+            .name {
+            }    
+            .slogan {
+            }            
+            .initial {              
+              p {                
+                strong {
+                }
+              }
+            }      
+            &:hover {
+            }
+          }
+          // logo    
+          .snsContainer {    
+            .sns {
+              .icon {    
+                &:hover {
+                }
+              }
+            }
+          }
+          // snsContainer
+        }
+        // leftContents
+    
+        .rightContents {          
+          .menuWrapper {
+            .menu {
+            }  
+            .list {  
+              .item {
+                a {
+                }
+  
+                &:hover {
+                }
+              }
+            }
+            // list
+          }
+          // menuWrapper
+        }
+        // rightContents
+      }
+      // mainContents
+  
+      p {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ..........................
+@include xl {
+  .footer {
+    .container {  
+      .mainContents {
+        width: 90%;
+
+        .leftContents{    
+          .logo {      
+            .name {
+            }    
+            .slogan {
+            }            
+            .initial {              
+              p {                
+                strong {
+                }
+              }
+            }      
+            &:hover {
+            }
+          }
+          // logo
+          .snsContainer {    
+            .sns {
+              .icon {    
+                &:hover {
+                }
+              }
+            }
+          }
+          // snsContainer
+        }
+        // leftContents
+    
+        .rightContents {
+          width: 65%;
+          .menuWrapper {            
+            .menu {
+            }  
+            .list {
+              .item {
+                a {
+                }
+  
+                &:hover {
+                }
+              }
+            }
+            // list
+          }
+          // menuWrapper
+        }
+        // rightContents
+      }
+      // mainContents
+  
+      p {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include lg {
+  .footer {
+    .container {  
+      .mainContents {
+        width: 95%;
+
+        .leftContents{    
+          .logo {      
+            .name {
+            }    
+            .slogan {
+            }            
+            .initial {              
+              p {                
+                strong {
+                }
+              }
+            }      
+            &:hover {
+            }
+          }
+          // logo
+          .snsContainer {    
+            .sns {
+              .icon {    
+                &:hover {
+                }
+              }
+            }
+          }
+          // snsContainer
+        }
+        // leftContents
+    
+        .rightContents {
+          width: 65%;
+          .menuWrapper {            
+            .menu {
+            }  
+            .list {
+              .item {
+                a {
+                }
+  
+                &:hover {
+                }
+              }
+            }
+            // list
+          }
+          // menuWrapper
+        }
+        // rightContents
+      }
+      // mainContents
+  
+      p {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+  .footer {
+    .container {  
+      .mainContents {
+        width: 95%;
+
+        .leftContents{  
+          width: 65%;
+
+          .logo {      
+            .name {
+            }    
+            .slogan {
+            }            
+            .initial {              
+              p {                
+                strong {
+                }
+              }
+            }      
+            &:hover {
+            }
+          }
+          // logo
+          .snsContainer {    
+            .sns {
+              .icon {    
+                &:hover {
+                }
+              }
+            }
+          }
+          // snsContainer
+        }
+        // leftContents
+    
+        .rightContents {
+          @include container-grid(3, 1fr, 0);
+
+          .menuWrapper {            
+            &:nth-child(3) {
+              display: none;
+            }
+
+            &:nth-child(4) {
+              display: none;
+            }
+
+            &:last-child {
+              display: flex;
+            }
+
+            .menu {
+            }  
+            .list {
+              .item {
+                a {
+                }
+  
+                &:hover {
+                }
+              }
+            }
+            // list
+          }
+          // menuWrapper
+        }
+        // rightContents
+      }
+      // mainContents
+  
+      p {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// md
+
+
+// @media screen and (max-width: 576px) ..........................
+@include sm {
+  .footer {
+    .container {  
+      .mainContents {
+        width: 90%;
+        flex-direction: column-reverse;
+        gap: 3.2rem;
+
+        .leftContents{  
+          width: 60%;
+
+          .logo {      
+            .name {
+            }    
+            .slogan {
+            }            
+            .initial {              
+              p {                
+                strong {
+                }
+              }
+            }      
+            &:hover {
+            }
+          }
+          // logo
+          .snsContainer {    
+            .sns {
+              .icon {    
+                &:hover {
+                }
+              }
+            }
+          }
+          // snsContainer
+        }
+        // leftContents
+    
+        .rightContents {
+          @include container-grid(3, 1fr, 0);
+          justify-items: center;
+
+          .menuWrapper {            
+            &:nth-child(3) {
+              display: none;
+            }
+
+            &:nth-child(4) {
+              display: none;
+            }
+
+            &:last-child {
+              display: flex;
+            }
+
+            .menu {
+            }  
+            .list {
+              .item {
+                a {
+                }
+  
+                &:hover {
+                }
+              }
+            }
+            // list
+          }
+          // menuWrapper
+        }
+        // rightContents
+      }
+      // mainContents
+  
+      p {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// md

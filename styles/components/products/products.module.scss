@@ -1,0 +1,120 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.products {
+  height: 560px;
+
+  .container {
+    @include container-flex;
+    height: 100%;
+
+    .textContent {
+      max-width: 55%;
+      height: 100%;
+      color: $gray60;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+      // background-color: #999;
+
+      
+      .display {
+        @include disp5;
+        color: $black90;
+      }
+
+      .btnWrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        .btnIcon {
+          @include btn-text;
+          color: $primary-lts1;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+    }
+    // textContent
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 35%;
+      height: 100%;
+      
+      .heroImg {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 7px 10px 15px rgba(0,0,0,0.5);
+      }
+      // ...Image condition
+    }
+    // imageContent
+    
+  }
+  // container
+}
+
+
+
+// @media screen and (max-width: 1024px) ............................
+@include lg {
+  .products {
+    height: 800px;
+  
+    .container {
+      flex-direction: column;
+      gap: 32px;
+
+      .textContent {
+        max-width: 80%;
+      }
+
+      .imageContent {
+        width: 80%;
+      }
+    }
+    // container
+  }
+  // hero
+}
+
+
+
+// @media screen and (max-width: 768px) ............................
+@include md {
+  .products {
+    height: 700px;
+  
+    .container {
+      width: 100%;
+
+      .textContent {
+        max-width: 85%;
+
+        .desc {
+          display: none;
+        }
+      }
+
+      .imageContent {
+        width: 85%;
+      }
+    }
+    // container
+  }
+  // hero
+}
